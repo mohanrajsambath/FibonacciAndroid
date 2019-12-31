@@ -7,11 +7,12 @@ import org.junit.Test
 
 class FibonacciRepositoryTest {
 
-    private lateinit var fibonacciUseCase: FibonacciRepositoryUseCase
+    private lateinit var fibonacciUseCase: FibonacciRepositoryImpl
 
     @Before
     fun initAll() {
-        fibonacciUseCase = FibonacciRepository()
+        fibonacciUseCase =
+            FibonacciRepositoryImpl()
     }
 
     @Test

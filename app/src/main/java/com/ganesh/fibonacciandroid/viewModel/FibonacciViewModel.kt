@@ -2,7 +2,7 @@ package com.ganesh.fibonacciandroid.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
-import com.ganesh.fibonacciandroid.domain.FibonacciSeriesUseCase
+import com.ganesh.fibonacciandroid.domain.usecases.FibonacciSeriesUseCase
 import kotlinx.coroutines.*
 import javax.inject.Inject
 

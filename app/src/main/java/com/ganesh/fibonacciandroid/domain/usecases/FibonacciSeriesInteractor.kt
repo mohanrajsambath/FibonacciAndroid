@@ -1,10 +1,10 @@
-package com.ganesh.fibonacciandroid.domain
+package com.ganesh.fibonacciandroid.domain.usecases
 
-import com.ganesh.fibonacciandroid.data.repo.FibonacciRepositoryUseCase
+import com.ganesh.fibonacciandroid.data.repo.FibonacciRepositoryImpl
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 import javax.inject.Inject
 
-class FibonacciSeriesInteractor @Inject constructor(private val fibonacciSeriesUsecase: FibonacciRepositoryUseCase) :
+class FibonacciSeriesInteractor @Inject constructor(private val fibonacciSeriesUsecase: FibonacciRepositoryImpl) :
     FibonacciSeriesUseCase {
 
     override suspend fun getList(limit: Int): List<FibonacciModel> {

@@ -1,8 +1,8 @@
-package com.ganesh.fibonacciandroid.data.repo
+package com.ganesh.fibonacciandroid.domain.repository
 
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 
-interface FibonacciRepositoryUseCase {
+interface FibonacciRepository {
     suspend fun generateFibonacciSeries(count: Int)
     suspend fun getFibonacciList(): List<FibonacciModel>
     suspend fun hasReachedEnd(): Boolean

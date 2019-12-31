@@ -1,7 +1,7 @@
 package com.ganesh.fibonacciandroid.viewModel
 
 import com.ganesh.fibonacciandroid.BaseTest
-import com.ganesh.fibonacciandroid.domain.FibonacciSeriesUseCase
+import com.ganesh.fibonacciandroid.domain.usecases.FibonacciSeriesUseCase
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 import kotlinx.coroutines.runBlocking
 

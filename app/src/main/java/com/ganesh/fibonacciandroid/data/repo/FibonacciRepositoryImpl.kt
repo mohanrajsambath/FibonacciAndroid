@@ -1,8 +1,10 @@
 package com.ganesh.fibonacciandroid.data.repo
 
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
+import com.ganesh.fibonacciandroid.domain.repository.FibonacciRepository
 
-class FibonacciRepository : FibonacciRepositoryUseCase {
+class FibonacciRepositoryImpl :
+    FibonacciRepository {
 
     private var position = 0
     private var firstNumber: Long = -1

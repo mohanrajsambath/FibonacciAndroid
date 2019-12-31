@@ -1,4 +1,4 @@
-package com.ganesh.fibonacciandroid.domain
+package com.ganesh.fibonacciandroid.domain.usecases
 
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 
