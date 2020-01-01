@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.ganesh.endlessrecyclerview.EndlessRecyclerOnScrollListener
+
 import com.ganesh.fibonacciandroid.R
 import com.ganesh.fibonacciandroid.databinding.ActivityMainBinding
 import com.ganesh.fibonacciandroid.view.adapter.ItemsAdapter
@@ -15,7 +15,16 @@ import com.ganesh.fibonacciandroid.viewModel.FibonacciViewModel
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
-import android.view.View
+
+
+/**
+ * main activity to view list of fibonacci numbers
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
+import com.ganesh.fibonacciandroid.view.customviews.EndlessRecyclerOnScrollListener
 
 
 class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
@@ -41,14 +50,17 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                 .get(FibonacciViewModel::class.java)
 
         addScrollListener()
-
         binding.adapter = adapter
-
+        viewModel.getFibonacciList()
         setUpViewModelObserver()
     }
 
     override fun supportFragmentInjector() = dispatchingAndroidInjector
 
+    /**
+     * scrolling of the recyclerview handling
+     *
+     */
     private fun addScrollListener() {
         binding.recyclerView.addOnScrollListener(object :
             EndlessRecyclerOnScrollListener() {
@@ -58,24 +70,20 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         })
     }
 
-
+    /**
+     * set up viewmodel's livedata observer
+     *
+     */
     private fun setUpViewModelObserver() {
 
         viewModel.fibonacciLiveData.observe(this, Observer {
-            if (it.isNotEmpty()) {
-                adapter.update(it)
-            }
+            adapter.update(it)
         })
 
         viewModel.canShowLoading.observe(this, Observer {
-            if (it) {
-                binding.itemProgressBar.visibility = View.VISIBLE
-            } else {
-                binding.itemProgressBar.visibility = View.GONE
-            }
+            binding.visibilities = it
         })
 
-        viewModel.getFibonacciList()
 
     }
 

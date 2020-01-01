@@ -9,7 +9,13 @@ import com.ganesh.fibonacciandroid.R
 import com.ganesh.fibonacciandroid.databinding.ItemViewBinding
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 import javax.inject.Inject
-
+/**
+ * adapter listing out fibonacci numbers
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 
 class ItemsAdapter @Inject constructor() : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
 
@@ -49,6 +55,7 @@ class ItemsAdapter @Inject constructor() : RecyclerView.Adapter<ItemsAdapter.Vie
 
     class ItemViewHolder(
         private val parent: ViewGroup,
+
         private val binding: ItemViewBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
             R.layout.item_view,

@@ -14,6 +14,10 @@ import dagger.android.support.HasSupportFragmentInjector
 
 /**
  * Helper class to automatically inject fragments if they implement [Injectable].
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
  */
 object AppInjector {
 

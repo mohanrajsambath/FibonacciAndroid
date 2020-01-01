@@ -32,8 +32,12 @@ class FibonacciRepositoryTest {
 
     }
 
+    /**
+     * to ensure 5th item value is 3 in Fibonacci series
+     *
+     */
     @Test
-    fun generate_ItemNoFive_three() {
+    fun generate_ItemCountFive_three() {
 
         runBlocking {
             fibonacciUseCase.clearList()
@@ -66,6 +70,10 @@ class FibonacciRepositoryTest {
 
     }
 
+    /**
+     * to ensure when count below 0, result should be empty
+     *
+     */
     @Test
     fun generate_belowZero_success() {
 
@@ -84,12 +92,16 @@ class FibonacciRepositoryTest {
 
     }
 
+    /**
+     * to test it reached end when count becomes more then 93
+     *
+     */
     @Test
     fun generate_invalid_failure() {
 
         runBlocking {
             fibonacciUseCase.clearList()
-            fibonacciUseCase.generateFibonacciSeries(200)
+            fibonacciUseCase.generateFibonacciSeries(94)
         }
 
         runBlocking {
@@ -97,9 +109,8 @@ class FibonacciRepositoryTest {
         }
 
         runBlocking {
-            assertTrue(fibonacciUseCase.getFibonacciList().size != 200)
+            assertTrue(fibonacciUseCase.getFibonacciList().size != 94)
         }
-
 
     }
 

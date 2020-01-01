@@ -6,7 +6,13 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
-
+/**
+ * BaseViewModel
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 open class BaseViewModel : ViewModel(), CoroutineScope {
 
     private val job = Job()

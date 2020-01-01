@@ -7,6 +7,12 @@ import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
+/**
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 @Suppress("unused")
 @Module
 abstract class ViewModelModule {

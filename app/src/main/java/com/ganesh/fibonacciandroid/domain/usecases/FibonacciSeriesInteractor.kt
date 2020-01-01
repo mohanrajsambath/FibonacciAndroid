@@ -4,6 +4,13 @@ import com.ganesh.fibonacciandroid.data.repo.FibonacciRepositoryImpl
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 import javax.inject.Inject
 
+/**
+ * Fibonacci use cases implementation
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 class FibonacciSeriesInteractor @Inject constructor(private val fibonacciSeriesUsecase: FibonacciRepositoryImpl) :
     FibonacciSeriesUseCase {
 

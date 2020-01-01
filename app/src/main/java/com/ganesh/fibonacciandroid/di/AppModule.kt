@@ -8,7 +8,13 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-
+/**
+ * App Module
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 @Module(includes = [ViewModelModule::class])
 class AppModule {
 

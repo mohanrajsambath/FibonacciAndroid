@@ -34,7 +34,6 @@ class FibonacciViewModelTest : BaseTest() {
 
         val numberList: MutableList<FibonacciModel> = mutableListOf()
 
-
         runBlocking {
 
             `when`(domainUseCase.getList(30)).thenReturn(
@@ -45,7 +44,6 @@ class FibonacciViewModelTest : BaseTest() {
         }
 
         verify(spyViewModel, times(1)).handleResult(numberList)
-
     }
 
 

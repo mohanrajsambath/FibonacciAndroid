@@ -3,6 +3,13 @@ package com.ganesh.fibonacciandroid.data.repo
 import com.ganesh.fibonacciandroid.domain.model.FibonacciModel
 import com.ganesh.fibonacciandroid.domain.repository.FibonacciRepository
 
+/**
+ * Fibonacci number generator
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 class FibonacciRepositoryImpl :
     FibonacciRepository {
 
@@ -35,18 +42,15 @@ class FibonacciRepositoryImpl :
             secondNumber = result
 
             if (result < 0) {
-                // if the result is a nagative number
+                // if result reaches MAX_LONG
                 isReachedEnd = true
+                // call this method
                 generateFibonacciSeries(0)
             } else {
-                // add the results in to list with position
+                // creating FibonacciModel object and add it into the list
                 fibonacciNumberList.add(
-                    FibonacciModel(
-                        result.toString(),
-                        (position++)
-                    )
-                )
-
+                    FibonacciModel(result.toString(), position++))
+                // call this method
                 generateFibonacciSeries(count - 1)
             }
 

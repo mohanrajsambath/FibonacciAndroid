@@ -8,6 +8,13 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
+/**
+ * Fibonacci Application
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 class FibonacciApplication : Application(), HasActivityInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
@@ -16,7 +23,6 @@ class FibonacciApplication : Application(), HasActivityInjector {
         super.onCreate()
         AppInjector.init(this)
     }
-
 
     override fun activityInjector() = dispatchingAndroidInjector
 

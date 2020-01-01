@@ -1,9 +1,15 @@
-package com.ganesh.endlessrecyclerview
+package com.ganesh.fibonacciandroid.view.customviews
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
+/**
+ * endless scrolling
+ * @author GaneshKumar Raja
+ * @version 1.0
+ * @since 1.0
+ * @year 2019
+ */
 abstract class EndlessRecyclerOnScrollListener : RecyclerView.OnScrollListener() {
 
 

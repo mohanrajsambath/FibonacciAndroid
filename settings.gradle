@@ -1,2 +1,2 @@
-include ':app', ':endlessrecyclerview'
+include ':app'
 rootProject.name='FibonacciAndroid'

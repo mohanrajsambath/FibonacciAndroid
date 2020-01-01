@@ -47,6 +47,9 @@ dependencies {
     //Android Architecture Components
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-beta01"
+
     // CardView
     implementation 'androidx.cardview:cardview:1.0.0'
     // RecyclerView
@@ -59,7 +62,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
 
-    implementation project(':endlessrecyclerview')
+
 
     //test dependencies
     testImplementation "junit:junit:$jUnitVersion"
